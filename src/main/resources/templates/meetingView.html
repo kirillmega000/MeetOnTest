@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View all meetings</title>
+</head>
+<body>
+    <div th:insert="common/header :: header"/>
+    <div>
+        List of meetings:
+    </div>
+    <div th:each="meeting: ${meetings}">
+        <hr>
+        <div>
+            <div>Name: <span th:text="${meeting.name}"/></div>
+            <div>About: <span th:text="${meeting.about}"/></div>
+            <!--
+            <div>Date: <span th:text="${#dates.format(meeting.date, 'dd.MM.yyyy HH:mm')}"/></div>
+            <div>Manager: <span th:text="${meeting.manager.name}"/></div>
+            -->
+        </div>
+    </div>
+    <div th:insert="common/footer :: footer"/>
+</body>
+</html>

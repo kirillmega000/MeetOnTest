@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating new user</title>
+</head>
+<body>
+    <div th:insert="common/header :: header"/>
+    <form method="post">
+        <input type="text" name="username" placeholder="Enter name">
+        <input type="text" name="about" placeholder="Write something about you">
+        <input type="submit" content="Create">
+    </form>
+    <div th:insert="common/footer :: footer"/>
+</body>
+</html>
