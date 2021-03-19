@@ -1,4 +1,4 @@
-package com.example.meetontest.entities;
+package com.example.meetontest.api.entities;
 
 import javax.persistence.*;
 import java.util.Date;
