@@ -36,7 +36,7 @@ public class UserApiController {
     @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User newUser) {
         User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User no exist!"));
-        user.setUsername(newUser.getUsername());
+        user.setFirstName(newUser.getFirstName());
         user.setAbout(newUser.getAbout());
         User updatedUser = userRepository.save(user);
         return ResponseEntity.ok(updatedUser);
